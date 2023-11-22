@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>SELECTORES AVANZADOS</title>
+    <style>
+        .hijos-directos>li{
+            color: aqua;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+        .hijos-descendentes span {
+            /*si se pone "li" se queda en rojo solo la palabra primavera.   */
+
+            color: red;
+            font-size: larger;
+
+        }
+        .hermanos~li{
+            color: red;
+            font-style: italic;
+        }
+
+        .hermanos-adyacentes{
+            background-color: blue;
+            color: white;
+        }
+        a[href]{
+            background-color: rgb(92, 187, 48);
+        }
+        .ejemplo1 a[href]{
+            background-color: rgb(233, 131, 14);
+
+        }
+        .ejemplo2 a[href^="https://es.wikipedia.org/wiki/Wikipedia:Portada"]{
+            background-color:  green ;
+        }
+    </style>
+</head>
+<body>
+    <h1>SELECTOR ES AVANZADOS</h1>
+    <h2>HIJOS DIRECTOS</h2>
+    <ul class="hijos-directos">
+        <li><span>Primavera</span></li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Inverno</li>
+    </ul>
+
+    <h2>HIJOS DESCENDENTES</h2>
+    <ul class="hijos-descendentes">
+        <li><span>Primavera</span></li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Inverno</li>
+    </ul>
+
+    <h2>HERMANOS~</h2>
+    <ul class="hermanos">
+        <li>Primavera</li>
+        <li class="hermanos">Verano</li>
+        <li>Otoño</li>
+        <li>Inverno</li>
+    </ul>
+
+    <h2>HERMANOS ADYACENTES~</h2>
+     
+    <h2>HERMANOS~</h2>
+        <ul class="hermanos">
+            <li>Primavera</li>
+            <li class="hermanos">Verano</li>
+            <li>Otoño</li>
+            <li>Inverno</li>
+        </ul>
+<h2>HERMANOS ADYACENTES</h2>
+        <ul>
+        <li>Primavera</li>
+        <li class="hermanos-adyacentes">Verano</li>
+        <li>Otoño</li>
+        <li>Inverno</li>
+    </ul>
+
+    <h2>Valor atributos</h2>
+    <ol>
+        <li><a href="https://www.correnetwork.com">Elemento1</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento2</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento3</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento4</a></li>
+        <li><a>Elemento5</a></li>
+    </ol>
+
+
+    <h2>Valor de atributos con texto</h2>
+    <ol class="ejemplo1">
+        <li><a href="https://www.correnetwork.com">Elemento1</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento2</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento3</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento4</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Elemento5</a></li>
+    </ol>
+
+    <h2>Valor de atributos con texto Y</h2>
+    <ol class="ejemplo2">
+        <li><a href="https://www.correnetwork.com">Elemento1</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento2</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento3</a></li>
+        <li><a href="https://www.correnetwork.com">Elemento4</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Elemento5</a></li>
+    </ol>
+
+</body>
+</html>
